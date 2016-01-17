@@ -1,5 +1,6 @@
-Java serialization performance in different scenarios, focus is on EE integration scenarios (EJB, REST webservice and client in war or jar)
+Intro
 ================
+Java serialization performance in different scenarios, focus is on EE integration scenarios (EJB, REST webservice and client in war or jar)
 
 Modules
 ----------------
