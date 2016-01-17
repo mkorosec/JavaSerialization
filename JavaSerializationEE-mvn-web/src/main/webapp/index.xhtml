@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Serialization performance</title>
+    </h:head>
+    <h:body>
+        <p>Runs all registered providers of serialization scenarios. Runs tests with the supplied number of objects (each test is repeated a number of times to provide more accurate results).</p>
+        <p>Details of each case are described in javadoc (package si.mko.test.serialize.test).</p>
+        <h:form class="form-horizontal" id="formId">      
+            <div class="control-group">
+                <label class="control-label" for="numberOfObjects"># of objects</label>
+                <div class="controls">
+                    <h:inputText id="numberOfObjects" value="#{benchmarks.numberOfObjects}"> </h:inputText>
+                </div> 
+            </div> 
+            <div class="control-group">
+                <label class="control-Label">Repeat measurments</label>
+                <div class="controls">
+                    <h:inputText id="repeat" value="#{benchmarks.repeat}"> </h:inputText>
+                </div>
+            </div>
+            <h:commandButton value="click" action="#{benchmarks.refreshTestRunResults()}"/>       
+        </h:form>
+
+        <p>#{benchmarks.latestResults}</p>
+    </h:body>
+</html>
+
